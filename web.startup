@@ -1,0 +1,6 @@
+ifconfig eth0 10.10.10.3/24 up
+route add default gw 10.10.10.5
+
+#DNS
+echo "nameserver 10.0.0.253" > /etc/resolv.conf
+
