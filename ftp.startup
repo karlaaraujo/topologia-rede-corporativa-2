@@ -6,15 +6,25 @@ echo "nameserver 10.0.0.253" > /etc/resolv.conf
 
 # criar usuarios
 useradd -m -s /bin/bash usuario1
-echo -e "minha-senha\nminhasenha" | passwd usuario1
+echo -e "minha-senha\nminha-senha" | passwd usuario1
 
 useradd -m -s /bin/bash usuario2
-echo -e "minha-senha\nminhasenha" | passwd usuario2
+echo -e "minha-senha\nminha-senha" | passwd usuario2
 
 useradd -m -s /bin/bash usuario3
-echo -e "minha-senha\nminhasenha" | passwd usuario3
+echo -e "minha-senha\nminha-senha" | passwd usuario3
 
 # atualizar apt e instalar pacote necessario
 apt update -y
 apt install -y proftpd
+
+# gambi para adicionar o ip do FTP no arquivo hosts para o comando seguinte (procura pelo ip no DNS) quando ha algum problema no DNS
+#echo -e "127.0.0.1 localhost\n::1 localhost ip6-localhost ip6-loopback\nfe00::0 ip6-localnet\nff00::0 ip6-mcastprefix\nff02::1 ip6-allnodes\nff02::2 ip6-allrouters\n10.10.10.2 ftp\n" > /etc/hosts
+
+# configuracoes de acesso anonimo e home dos usuarios
+# utilizaro cp não esta funcioanndo, ver como copiar o conteudo do arquivo conf.txt para o /etc/proftpd/proftpd.conf
+#cp conf.txt > /etc/proftpd/proftpd.conf
+
 /etc/init.d/proftpd start
+
+
