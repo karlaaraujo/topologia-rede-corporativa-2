@@ -3,3 +3,18 @@ route add default gw 10.10.10.5
 
 #DNS
 echo "nameserver 10.0.0.253" > /etc/resolv.conf
+
+# criar usuarios
+useradd -m -s /bin/bash usuario1
+echo -e "minha-senha\nminhasenha" | passwd usuario1
+
+useradd -m -s /bin/bash usuario2
+echo -e "minha-senha\nminhasenha" | passwd usuario2
+
+useradd -m -s /bin/bash usuario3
+echo -e "minha-senha\nminhasenha" | passwd usuario3
+
+# atualizar apt e instalar pacote necessario
+apt update -y
+apt install -y proftpd
+/etc/init.d/proftpd start
