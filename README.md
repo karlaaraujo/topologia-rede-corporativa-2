@@ -14,11 +14,13 @@ Error:
  just run the local dns configuration at the terminal of the machine going trough problems again, after the kathara inicialization, and things should be solved.
 
  Error (web):  
-``` apache2: apr_sockaddr_info_get() failed for web
+``` 
+apache2: apr_sockaddr_info_get() failed for web
 ```  
 Solution: 
 inserir  
-```ping app01.admweb.empresa.com.br 
+```
+ping app01.admweb.empresa.com.br 
 ```
 e após, tentar startar o apache novamente.
 
