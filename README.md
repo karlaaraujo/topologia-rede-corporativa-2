@@ -1,7 +1,7 @@
 # topologia-rede-corporativa
 
 ## Errors resolutions
-Error:
+### Error:
 ``` Err http://security.ubuntu.com oneiric-security Release.gpg
   Temporary failure resolving ‘security.ubuntu.com’ 
 ```
@@ -9,11 +9,11 @@ Error:
  do a 'ping 8.8.8.8' at the terminals of every machine that downloads packages and then, after a successful ping, run the apt-get commands one by one at the terminal.  
  this is a common error at the inicialization of the DNS, DHCP and FTP machines.
  
- Errors related to name resolving  
+ ### Errors related to name resolving  
  Solution:  
  just run the local dns configuration at the terminal of the machine going trough problems again, after the kathara inicialization, and things should be solved.
 
- Error (web):  
+ ### Error (web):  
 ``` 
 apache2: apr_sockaddr_info_get() failed for web
 ```  
@@ -25,13 +25,13 @@ ping app01.admweb.empresa.com.br
 e após, tentar startar o apache novamente.
 
 ## Testes máquina WEB
-1. rodar comandos dhcp  
+1. rodar comandos dhcp  (ip do pc)
 2. rodar comandos web  
 
-testar dns em cada maquina:  
+### testar dns em cada maquina:  
 ping www.admweb.empresa.com.br  
 
-testar web(http):  
+### testar web(http):  
 curl app01.admweb.empresa.com.br (no pc)  
 e  
 curl app02.admweb.empresa.com.br (no pc)  
