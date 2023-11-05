@@ -1,38 +1,15 @@
 # topologia-rede-corporativa
 
-## Errors resolutions
-### Error:
-``` Err http://security.ubuntu.com oneiric-security Release.gpg
-  Temporary failure resolving ‘security.ubuntu.com’ 
-```
- Solution:  
- do a 'ping 8.8.8.8' at the terminals of every machine that downloads packages and then, after a successful ping, run the apt-get commands one by one at the terminal.  
- this is a common error at the inicialization of the DNS, DHCP and FTP machines.
- 
- ### Errors related to name resolving  
- Solution:  
- just run the local dns configuration at the terminal of the machine going trough problems again, after the kathara inicialization, and things should be solved.
+Topologia de rede corporativa desenvolvida para a disciplina de Administração de Serviços Web, do curso técnico em Informática para Internet do Instituto Federal de Alagoas, com a ferramenta Kathara.
 
- ### Error (web):  
-``` 
-apache2: apr_sockaddr_info_get() failed for web
-```  
-Solution: 
-inserir  
-```
-ping app01.admweb.empresa.com.br 
-```
-e após, tentar startar o apache novamente.
+![image](https://github.com/karlaaraujo/topologia-rede-corporativa-2/assets/52178816/ecae98d0-be35-4996-a7d8-a9e4f27bb6b5)  
 
-## Testes máquina WEB
-1. rodar comandos dhcp  (ip do pc)
-2. rodar comandos web  
 
-### testar dns em cada maquina:  
-ping www.admweb.empresa.com.br  
+O projeto simula subredes e implementa as configurações de servidores Squid, DNS, Samba, DHCP, FTP, WEB e Email e configura um PC e dois roteadores (R1 e R2), de modo a conectá-los entre si e com a Internet.
 
-### testar web(http):  
-curl app01.admweb.empresa.com.br (no pc)  
-e  
-curl app02.admweb.empresa.com.br (no pc)  
+
+
+
+
+
  
